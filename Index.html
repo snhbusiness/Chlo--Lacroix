@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chloé Lacroix — Auxiliaire de vie & Garde d'enfants</title>
+<meta name="description" content="Chloé Lacroix, auxiliaire de vie et garde d'enfants. Douceur, patience et bienveillance au quotidien. 10 ans d'expérience. Déclarée CESU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF5F0;
+    --cream-soft:#F4E7DE;
+    --coral:#D97A5E;
+    --coral-deep:#C25A45;
+    --coral-tint:#F6DCD0;
+    --forest:#21433B;
+    --forest-soft:#2E5A4F;
+    --ink:#2B2420;
+    --muted:#6E635C;
+    --line:#E7D6CB;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Mulish',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif}
+  .wrap{width:100%;max-width:760px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  /* ---------- ARCH MOTIF (signature) ---------- */
+  .arch{border-radius:1000px 1000px 18px 18px}
+
+  /* ---------- HERO ---------- */
+  header{
+    position:relative;
+    padding:54px 0 40px;
+    text-align:center;
+    background:
+      radial-gradient(120% 80% at 50% -10%, var(--cream-soft) 0%, var(--cream) 60%);
+  }
+  .brandmark{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    font-weight:700;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;
+    color:var(--forest);margin-bottom:30px;
+  }
+  .brandmark span{opacity:.85}
+  .heart{width:26px;height:26px;flex:none}
+  .portrait{
+    width:178px;height:222px;margin:0 auto 24px;
+    object-fit:cover;display:block;
+    border:5px solid var(--forest);
+    box-shadow:0 18px 40px -18px rgba(33,67,59,.5);
+  }
+  h1{
+    font-size:clamp(2.5rem,9vw,3.6rem);
+    font-weight:500;line-height:1.02;letter-spacing:-.01em;
+    color:var(--ink);margin-bottom:6px;
+  }
+  .role{
+    font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--coral-deep);font-weight:700;margin-bottom:26px;
+  }
+  .quote{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.3rem,5vw,1.6rem);color:var(--coral-deep);
+    line-height:1.3;max-width:30ch;margin:0 auto 30px;
+  }
+  .quote::before{content:"“"}
+  .quote::after{content:"”"}
+
+  /* ---------- BUTTONS ---------- */
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'Mulish',sans-serif;font-weight:700;font-size:1.02rem;
+    padding:15px 26px;border-radius:14px;text-decoration:none;
+    transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
+    border:none;cursor:pointer;
+  }
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-call{background:var(--coral);color:#fff;box-shadow:0 12px 26px -10px rgba(194,90,69,.7)}
+  .btn-call:hover{background:var(--coral-deep);transform:translateY(-2px)}
+  .btn-wa{background:var(--forest);color:#fff;box-shadow:0 12px 26px -12px rgba(33,67,59,.6)}
+  .btn-wa:hover{background:var(--forest-soft);transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{
+    background:var(--forest);color:#fff;margin-top:46px;
+    padding:22px 0;
+  }
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;text-align:center}
+  .trust-item{display:flex;align-items:center;gap:9px;font-size:.95rem;font-weight:500}
+  .trust-item b{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;margin-right:2px}
+  .trust-item svg{width:18px;height:18px;flex:none;color:var(--coral)}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0}
+  .eyebrow{
+    font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--coral-deep);font-weight:700;margin-bottom:12px;text-align:center;
+  }
+  .sec-title{
+    font-size:clamp(1.7rem,6vw,2.3rem);font-weight:500;text-align:center;
+    color:var(--forest);line-height:1.12;margin-bottom:14px;letter-spacing:-.01em;
+  }
+  .sec-intro{text-align:center;color:var(--muted);max-width:46ch;margin:0 auto 44px}
+
+  /* ---------- SERVICES ---------- */
+  .services{display:grid;gap:22px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:30px 26px;
+    box-shadow:0 14px 34px -26px rgba(43,36,32,.55);
+  }
+  .ico{
+    width:56px;height:64px;margin-bottom:18px;
+    background:var(--coral-tint);color:var(--coral-deep);
+    display:flex;align-items:center;justify-content:center;
+    border-radius:40px 40px 12px 12px;
+  }
+  .ico svg{width:28px;height:28px}
+  .card h3{font-size:1.32rem;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.15}
+  .card p{color:var(--muted);font-size:.98rem}
+  .card .exp{
+    display:inline-block;margin-top:14px;font-size:.78rem;font-weight:700;
+    letter-spacing:.04em;color:var(--forest);background:var(--cream-soft);
+    padding:5px 12px;border-radius:999px;
+  }
+
+  /* ---------- VALUES ---------- */
+  .values{background:var(--cream-soft)}
+  .values .wrap{max-width:620px}
+  .vlist{display:grid;gap:20px;margin-top:10px}
+  .vrow{display:flex;gap:16px;align-items:flex-start}
+  .vrow .dot{
+    width:38px;height:38px;border-radius:50%;flex:none;margin-top:2px;
+    background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;
+  }
+  .vrow .dot svg{width:18px;height:18px}
+  .vrow h3{font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+  .vrow p{color:var(--muted);font-size:.96rem}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .quotes{display:grid;gap:22px}
+  .tcard{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;
+    position:relative;
+  }
+  .tcard .mark{font-family:'Fraunces',serif;font-size:3.4rem;line-height:.6;color:var(--coral-tint);height:26px}
+  .tcard p{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:var(--ink);margin:6px 0 16px;line-height:1.45}
+  .tcard .who{font-weight:700;font-size:.92rem;color:var(--forest)}
+  .tcard .who span{display:block;font-weight:500;color:var(--muted);font-size:.85rem;font-style:normal;font-family:'Mulish',sans-serif}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--forest);color:var(--cream)}
+  .contact .eyebrow{color:var(--coral)}
+  .contact .sec-title{color:#fff}
+  .contact .sec-intro{color:rgba(251,245,240,.78)}
+  .form{display:grid;gap:14px;max-width:480px;margin:0 auto}
+  .field label{display:block;font-size:.82rem;font-weight:700;letter-spacing:.03em;margin-bottom:6px;color:rgba(251,245,240,.9)}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:'Mulish',sans-serif;font-size:1rem;
+    padding:13px 15px;border-radius:12px;border:1.5px solid rgba(251,245,240,.25);
+    background:rgba(251,245,240,.07);color:#fff;
+  }
+  .field input::placeholder,.field textarea::placeholder{color:rgba(251,245,240,.45)}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--coral);background:rgba(251,245,240,.12);
+  }
+  .field select option{color:#000}
+  .form .btn-call{width:100%;justify-content:center;margin-top:4px}
+  .or{text-align:center;color:rgba(251,245,240,.6);font-size:.85rem;margin:26px 0 18px;
+      display:flex;align-items:center;gap:14px}
+  .or::before,.or::after{content:"";flex:1;height:1px;background:rgba(251,245,240,.2)}
+  .direct{display:grid;gap:12px;max-width:480px;margin:0 auto}
+  .dline{
+    display:flex;align-items:center;gap:14px;text-decoration:none;
+    background:rgba(251,245,240,.07);border:1px solid rgba(251,245,240,.18);
+    padding:15px 18px;border-radius:14px;transition:background .2s ease,transform .15s ease;
+  }
+  .dline:hover{background:rgba(251,245,240,.14);transform:translateY(-1px)}
+  .dline svg{width:22px;height:22px;flex:none;color:var(--coral)}
+  .dline .lbl{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,245,240,.6)}
+  .dline .val{font-family:'Fraunces',serif;font-size:1.2rem;color:#fff;line-height:1.1}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#1A352E;color:rgba(251,245,240,.7);text-align:center;padding:34px 0;font-size:.85rem}
+  footer .name{font-family:'Fraunces',serif;font-size:1.3rem;color:#fff;margin-bottom:6px;display:block}
+  footer .cesu{margin-top:8px;font-size:.8rem;color:rgba(251,245,240,.5)}
+
+  /* ---------- MOTION ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn:hover,.dline:hover{transform:none}
+  }
+  @media(min-width:640px){
+    .services{grid-template-columns:repeat(3,1fr)}
+    .quotes{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandmark reveal">
+      <svg class="heart" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.8 6.6a4.5 4.5 0 0 0-7.4-1.4L12 6.6l-1.4-1.4a4.5 4.5 0 1 0-6.4 6.4l1.4 1.4L12 20l6.4-7 1.4-1.4a4.5 4.5 0 0 0 1-4z"/>
+      </svg>
+      <span>Auxiliaire de vie · Garde d'enfants</span>
+    </div>
+
+    <!-- Remplacez le src ci-dessous par la photo de Chloé (idéalement carrée/portrait) -->
+    <img class="portrait arch reveal"
+         src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop"
+         alt="Portrait de Chloé Lacroix">
+
+    <h1 class="reveal">Chloé Lacroix</h1>
+    <div class="role reveal">À vos côtés, chez vous</div>
+    <p class="quote reveal">Douceur, patience et bienveillance au quotidien</p>
+
+    <div class="cta-row reveal">
+      <a class="btn btn-call" href="tel:+33606787368" aria-label="Appeler Chloé">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Appeler
+      </a>
+      <a class="btn btn-wa" href="https://wa.me/33606787368?text=Bonjour%20Chlo%C3%A9%2C%20je%20vous%20contacte%20concernant%20vos%20services." target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.7-6.2A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.5L.06 24zM6.6 20.1l.4.2a9.9 9.9 0 0 0 5 1.4 9.9 9.9 0 1 0-8.4-4.6l.3.4-1 3.6 3.7-1zM17.9 14.3c-.1-.2-.5-.4-1-.6s-1.5-.7-1.7-.8-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5a.5.5 0 0 0 0-.5c0-.2-.6-1.5-.9-2s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.3 5.3 5.3 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4.1c2.2 1 2.2.7 2.6.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 19l-5 2.4 1-5.6-4-4 5.6-.8z"/></svg><span><b>10 ans</b> d'expérience</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Déclarée <b>CESU</b></span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg><span><b>−50%</b> crédit d'impôt</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow reveal">Mes services</div>
+    <h2 class="sec-title reveal">Des services adaptés à vos besoins</h2>
+    <p class="sec-intro reveal">Un accompagnement humain et fiable, à domicile, pour les vôtres comme pour vous.</p>
+
+    <div class="services">
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></div>
+        <h3>Personnes âgées & handicap</h3>
+        <p>Accompagnement attentionné au quotidien, présence rassurante et soutien adapté à chaque situation.</p>
+        <span class="exp">10 ans d'expérience</span>
+      </article>
+
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M17 8l2 2 4-4"/></svg></div>
+        <h3>Garde d'enfants</h3>
+        <p>En toute sécurité : périscolaire, sorties d'école, soirées. Une présence douce et de confiance.</p>
+        <span class="exp">Périscolaire & soirées</span>
+      </article>
+
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M5 10l-1 9h16l-1-9"/></svg></div>
+        <h3>Aide au quotidien</h3>
+        <p>Préparation des repas, aide à la toilette, courses et tâches du quotidien pour faciliter la vie à la maison.</p>
+        <span class="exp">Repas · toilette · courses</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <div class="eyebrow reveal">Ce qui me tient à cœur</div>
+    <h2 class="sec-title reveal">Pourquoi me faire confiance</h2>
+    <div class="vlist">
+      <div class="vrow reveal">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 6.6a4.5 4.5 0 0 0-7.4-1.4L12 6.6l-1.4-1.4a4.5 4.5 0 1 0-6.4 6.4L12 20l7.8-8.4a4.5 4.5 0 0 0 1-5z"/></svg></div>
+        <div><h3>Bienveillance avant tout</h3><p>Chaque personne est unique. J'adapte mon accompagnement avec patience et respect.</p></div>
+      </div>
+      <div class="vrow reveal">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h3>Expérience & sécurité</h3><p>10 ans auprès des familles. Sérieux, ponctualité et confiance au quotidien.</p></div>
+      </div>
+      <div class="vrow reveal">
+        <div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M4 19h16"/></svg></div>
+        <div><h3>Déclarée CESU</h3><p>Emploi déclaré et sécurisé — et 50&nbsp;% de crédit d'impôt sur les sommes versées.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow reveal">Elles m'ont fait confiance</div>
+    <h2 class="sec-title reveal">Ce qu'on dit de moi</h2>
+    <p class="sec-intro reveal">À remplacer par de vrais avis de vos familles — c'est ce qui rassure le plus.</p>
+    <!-- ⚠️ Remplacez ces 2 témoignages par de VRAIS retours de clients (prénom + ville) -->
+    <div class="quotes">
+      <article class="tcard reveal">
+        <div class="mark">“</div>
+        <p>Chloé s'occupe de ma maman avec une douceur incroyable. Je pars travailler l'esprit tranquille.</p>
+        <div class="who">Marie <span>Fille d'une personne accompagnée</span></div>
+      </article>
+      <article class="tcard reveal">
+        <div class="mark">“</div>
+        <p>Mes enfants l'adorent et elle est d'une fiabilité rare. Je la recommande les yeux fermés.</p>
+        <div class="who">Julien <span>Papa de deux enfants</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Parlons-en</div>
+    <h2 class="sec-title reveal">Disponibilités & tarifs sur demande</h2>
+    <p class="sec-intro reveal">Dites-moi votre besoin, je vous réponds rapidement.</p>
+
+    <div class="form reveal">
+      <div class="field">
+        <label for="nom">Votre nom</label>
+        <input id="nom" type="text" placeholder="Prénom et nom">
+      </div>
+      <div class="field">
+        <label for="besoin">Votre besoin</label>
+        <select id="besoin">
+          <option>Aide à une personne âgée / en situation de handicap</option>
+          <option>Garde d'enfants</option>
+          <option>Aide au quotidien (repas, courses, toilette)</option>
+          <option>Autre / je ne sais pas encore</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="msg">Votre message</label>
+        <textarea id="msg" rows="3" placeholder="Quelques mots sur votre situation, votre secteur, vos disponibilités…"></textarea>
+      </div>
+      <button class="btn btn-call" type="button" onclick="envoyer()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Envoyer ma demande
+      </button>
+    </div>
+
+    <div class="or">ou contactez-moi directement</div>
+
+    <div class="direct">
+      <a class="dline" href="tel:+33606787368">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span><span class="lbl">Téléphone</span><span class="val">06 06 78 73 68</span></span>
+      </a>
+      <a class="dline" href="mailto:chloelacroix.5@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+        <span><span class="lbl">E-mail</span><span class="val">chloelacroix.5@gmail.com</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="name">Chloé Lacroix</span>
+    Auxiliaire de vie &amp; Garde d'enfants
+    <div class="cesu">CESU (Chèque Emploi Service Universel) · Disponibilités et tarifs sur demande</div>
+  </div>
+</footer>
+
+<script>
+  function envoyer(){
+    var nom = document.getElementById('nom').value.trim();
+    var besoin = document.getElementById('besoin').value;
+    var msg = document.getElementById('msg').value.trim();
+    var sujet = "Demande de contact" + (nom ? " — " + nom : "");
+    var corps =
+      "Bonjour Chloé,%0D%0A%0D%0A" +
+      "Nom : " + encodeURIComponent(nom || "(à compléter)") + "%0D%0A" +
+      "Besoin : " + encodeURIComponent(besoin) + "%0D%0A%0D%0A" +
+      "Message :%0D%0A" + encodeURIComponent(msg || "(à compléter)") + "%0D%0A";
+    window.location.href = "mailto:chloelacroix.5@gmail.com?subject=" +
+      encodeURIComponent(sujet) + "&body=" + corps;
+  }
+
+  // Révélation au scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el,i){
+    el.style.transitionDelay = (Math.min(i,6)*60) + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
